@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>tab 选项卡</title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			ul>li{
+				list-style: none;
+			}
+			a {
+        text-decoration: none;
+			}
+			.tab {
+				width: 300px;
+				height: 300px;
+				float: left;
+				margin-right: 10px;
+				margin: auto;
+				left: 0px;
+				right: 0px;
+				top: 200px;
+				background-color: #eee;
+			}
+			.tab ul{
+				height: 30px;
+			}
+			.tab ul>li{
+				float: left;
+				margin-right: 5px;
+				line-height: 30px;
+				
+				color: #fff;
+			}
+			.tab ul>li a{
+				display: block;
+				padding: 0 20px;
+				color: #fff;
+				background-color: #300;
+				line-height: 30px;
+			}
+			.tab-content {
+				width: 300px;
+				height: 270px;
+				overflow: hidden;
+			}
+			.tab-content img {
+				width: 280px;
+				height: 250px;
+				padding: 10px;
+			}
+			.tab ul li.actived a{
+				background-color: #EEEEEE;
+				color: #330;
+			}
+			.tab-content .tab-item {
+				display: none;
+			}
+			.tab-content div.current {
+				display: block;
+			}
+		</style>
+	</head>
+  <script src="JS/jquery.min.js"></script>
+<script type="text/javascript" src="JS/tab.js"></script>
+	<body>
+		 <div>
+		 	<tab class="tab" data-config='{"triggerType":"mouseover","effect":"defalut",
+			"invoke":"1",
+			"loop":false}'>
+		 		<ul class="tab-nav">
+		 			<li class="actived"><a href="javascript:;">1</a></li>
+		 			<li><a href="javascript:;">2</a></li>
+		 			<li><a href="javascript:;">3</a></li>
+		 			<li><a href="javascript:;">4</a></li>
+		 		</ul>
+		 		<div class="tab-content">
+		 			<div class="tab-item current">
+		 				<img src="https://i02piccdn.sogoucdn.com/72d2a377489ce365" alt="" />
+		 			</div>
+		 			<div class="tab-item">
+		 				<img src="https://i01piccdn.sogoucdn.com/8287e31d93ab2f9b" alt="" />
+		 			</div>
+		 			<div class="tab-item">
+		 				<img src="https://i02piccdn.sogoucdn.com/72d2a377489ce365" alt="" />
+		 			</div>
+		 			<div class="tab-item">
+		 				<img src="https://i02piccdn.sogoucdn.com/72d2a377489ce365" alt="" />
+		 			</div>
+		 		</div>
+		 	</tab>
+		 </div>
+		 	<tab class="tab" data-config='{"triggerType":"mouseover","effect":"fade",
+			"invoke":"1",
+			"loop":true}'>
+		 		<ul class="tab-nav">
+		 			<li class="actived"><a href="javascript:;">1</a></li>
+		 			<li><a href="javascript:;">2</a></li>
+		 			<li><a href="javascript:;">3</a></li>
+		 			<li><a href="javascript:;">4</a></li>
+		 		</ul>
+		 		<div class="tab-content">
+		 			<div class="tab-item current">
+		 				<img src="https://i02piccdn.sogoucdn.com/72d2a377489ce365" alt="" />
+		 			</div>
+		 			<div class="tab-item">
+		 				<img src="https://i01piccdn.sogoucdn.com/8287e31d93ab2f9b" alt="" />
+		 			</div>
+		 			<div class="tab-item">
+		 				<img src="https://i02piccdn.sogoucdn.com/72d2a377489ce365" alt="" />
+		 			</div>
+		 			<div class="tab-item">
+		 				<img src="https://i02piccdn.sogoucdn.com/72d2a377489ce365" alt="" />
+		 			</div>
+		 		</div>
+		 	</tab>
+		 </div>
+
+	<script type="text/javascript">
+	$(function(){
+		//tab
+		$(".tab").tab();
+	})
+  </script>
+	</body>
+</html>
